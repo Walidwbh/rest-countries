@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LastRouteService } from './last-route.service';
+import { CountriesService } from './countries.service';
 
-describe('LastRouteService', () => {
-  let service: LastRouteService;
+describe('CountriesService', () => {
+  let service: CountriesService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LastRouteService);
+    service = TestBed.inject(CountriesService);
   });
 
   it('should be created', () => {

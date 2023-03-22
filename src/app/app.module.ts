@@ -9,6 +9,9 @@ import { CountryComponent } from './country/country.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select'
+
+import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +24,12 @@ import { MatSelectModule } from '@angular/material/select'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-// declare last-route service in the app module
-
 }

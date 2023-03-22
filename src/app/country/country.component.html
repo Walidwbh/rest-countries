@@ -1,1 +1,29 @@
-
+<section>
+  <div class="container">
+    <button routerLink="/home"><fa-icon [icon]="faArrowLeftLong"></fa-icon>&nbsp;&nbsp;Back</button>
+    <div class="country">
+      <img src="https://flagcdn.com/w320/be.png" alt="">
+      <div class="description">
+        <h2>{{countryData?.[0].name.common}}</h2>
+        <div class="info">
+          <div>
+            <h5>Native Name:&nbsp;</h5><span>{{countryData?.[0].languages}}</span><br>
+            <h5>Population:&nbsp;</h5><span>111319511</span><br>
+            <h5>Region:&nbsp;</h5><span>Europe</span><br>
+            <h5>Sub Region:&nbsp;</h5><span>Western</span><br>
+            <h5>Capital:&nbsp;</h5><span>Brussels</span><br>
+          </div>
+          <div>
+            <h5>Top Level Domain:&nbsp;</h5><span>.be</span><br>
+            <h5>Currencies:&nbsp;</h5><span>Euro</span><br>
+            <h5>Languages:&nbsp;</h5><span>Dutch, French, German</span><br>
+          </div>
+        </div>
+        <h5>Border Countries: &nbsp;</h5>
+        <div class="border">France</div>
+        <div class="border">Germany</div>
+        <div class="border">Netherlands</div>
+      </div>
+    </div>
+  </div>
+</section>
