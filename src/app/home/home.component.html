@@ -1,0 +1,66 @@
+<section class="home">
+  <div class="container">
+    <form class="search-form" novalidate>
+      <mat-form-field>
+        <!-- <mat-label>Favorite food</mat-label> -->
+        <input matInput placeholder="Search for a country...">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Filter by Region</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let region of regions" [value]="region.value">
+            {{ region.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <div class="countries">
+      <!-- country card -->
+      <div class="country">
+        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/nl.png"></a>
+        <div class="body">
+          <h3>Tunisia</h3>
+          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
+          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
+          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
+        </div>
+      </div>
+      <div class="country">
+        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/fr.png"></a>
+        <div class="body">
+          <h3>Tunisia</h3>
+          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
+          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
+          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
+        </div>
+      </div>
+      <div class="country">
+        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/be.png"></a>
+        <div class="body">
+          <h3>Tunisia</h3>
+          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
+          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
+          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
+        </div>
+      </div>
+      <div class="country">
+        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/us.png"></a>
+        <div class="body">
+          <h3>Tunisia</h3>
+          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
+          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
+          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
+        </div>
+      </div>
+      <div class="country">
+        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/de.png"></a>
+        <div class="body">
+          <h3>Tunisia</h3>
+          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
+          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
+          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
