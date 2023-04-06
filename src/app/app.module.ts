@@ -12,12 +12,14 @@ import { MatSelectModule } from '@angular/material/select'
 
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CountryCardComponent } from './components/country-card/country-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CountryComponent
+    CountryComponent,
+    CountryCardComponent
   ],
   imports: [
     BrowserModule,

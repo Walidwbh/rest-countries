@@ -1,26 +1,22 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, retry, throwError } from 'rxjs';
+import { catchError, map, Observable, retry, throwError } from 'rxjs';
+import { Country } from '../types/country';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountriesService {
-  private restUrl = "https://restcountries.com/v3.1/name/"
+  private api = "https://restcountries.com/v2/name/";
+  private apiAll = "https://restcountries.com/v2/all";
   constructor(private httpClient: HttpClient) { }
   // method that returns one country
-  getOneCountry(name:string):Observable<any>{
+  getOneCountry(name:string){
     let headers = new HttpHeaders();
-    return this.httpClient.get<any>(this.restUrl+name, {headers: headers}).pipe(retry(3), catchError(this.httpErrorHandler))
+    return this.httpClient.get<Country[]>(this.api+name, {headers: headers}).pipe(map(([res])=>res))
   }
-  private httpErrorHandler (error: HttpErrorResponse) {
-    if(error.error instanceof ErrorEvent){
-      console.error(`A client side error occured. the error message is ${error.message}`);
-    }else {
-      console.error(`An error happened in the server. the http status code is ${error.status} and the error returned is ${error.message}`)
-    }
-    return throwError(()=>{
-      new Error("Error occured please try again");
-    })
+  getAllCountries(){
+    let headers = new HttpHeaders();
+    return this.httpClient.get<Country[]>(this.apiAll, {headers: headers})
   }
 }
