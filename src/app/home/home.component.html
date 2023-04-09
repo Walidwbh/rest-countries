@@ -1,54 +1,8 @@
 <section class="home">
-  <!-- <h1 *ngFor=" let country of countries$ | async">{{country.name}}</h1> -->
   <div class="container">
     <div class="countries" >
-      <app-country-card class="country" *ngFor=" let country of countries$ | async" [country]="country"></app-country-card>
       <!-- country card -->
-      <!-- <div class="country">
-        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/nl.png"></a>
-        <div class="body">
-          <h3>Tunisia</h3>
-          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
-          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
-          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
-        </div>
-      </div>
-      <div class="country">
-        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/fr.png"></a>
-        <div class="body">
-          <h3>Tunisia</h3>
-          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
-          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
-          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
-        </div>
-      </div>
-      <div class="country">
-        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/be.png"></a>
-        <div class="body">
-          <h3>Tunisia</h3>
-          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
-          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
-          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
-        </div>
-      </div>
-      <div class="country">
-        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/us.png"></a>
-        <div class="body">
-          <h3>Tunisia</h3>
-          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
-          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
-          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
-        </div>
-      </div>
-      <div class="country">
-        <a routerLink="/home/tunisia"><img src="https://flagcdn.com/w320/de.png"></a>
-        <div class="body">
-          <h3>Tunisia</h3>
-          <h5>Population: </h5>&nbsp;<span>11818618</span><br>
-          <h5>Region: </h5>&nbsp;<span>Africa</span><br>
-          <h5>Capital: </h5>&nbsp;<span>Tunis</span><br>
-        </div>
-      </div> -->
+      <app-country-card class="country" *ngFor="let country of countriesArray" [country]="country" ></app-country-card>
     </div>
   </div>
 </section>
