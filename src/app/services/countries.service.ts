@@ -7,16 +7,14 @@ import { Country } from '../types/country';
   providedIn: 'root'
 })
 export class CountriesService {
-  private api = "https://restcountries.com/v2/name/";
-  private apiAll = "https://restcountries.com/v2/all";
+  private Url = "https://restcountries.com/v2/";
   constructor(private httpClient: HttpClient) { }
-  // method that returns one country
   getOneCountry(name:string){
     let headers = new HttpHeaders();
-    return this.httpClient.get<Country[]>(this.api+name, {headers: headers}).pipe(map(([res])=>res))
+    return this.httpClient.get<Country[]>(`${this.Url}/name/${name}`, {headers: headers}).pipe(map(([res])=>res))
   }
   getAllCountries(){
     let headers = new HttpHeaders();
-    return this.httpClient.get<Country[]>(this.apiAll, {headers: headers})
+    return this.httpClient.get<Country[]>(`${this.Url}/all`, {headers: headers})
   }
 }

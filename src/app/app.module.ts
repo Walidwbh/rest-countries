@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountryCardComponent } from './components/country-card/country-card.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { CountryCardComponent } from './components/country-card/country-card.com
     MatInputModule,
     MatSelectModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

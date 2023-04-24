@@ -1,8 +1,11 @@
 <section class="home">
   <div class="container">
-    <div class="countries" >
+    <div class="country-filters">
+      <input type="text" placeholder="Search for a Country..." [(ngModel)]="searchFilter">
+    </div>
+    <div class="countries">
       <!-- country card -->
-      <app-country-card class="country" *ngFor="let country of countriesArray" [country]="country" ></app-country-card>
+        <app-country-card class="country" *ngFor="let country of countries" [country]="country" ></app-country-card>
     </div>
   </div>
 </section>

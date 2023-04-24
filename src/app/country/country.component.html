@@ -19,9 +19,11 @@
             <h5>Languages:&nbsp;</h5><span>{{getLanguages(country.languages)}}</span><br>
           </div>
         </div>
-        <h5>Border Countries: &nbsp;</h5>
-        <div *ngFor="let border of country.borders">
-          <div class="border">{{border}}</div>
+        <div *ngIf="country.borders">
+          <h5>Border Countries: &nbsp;</h5>
+          <div *ngFor="let border of country.borders">
+            <div class="border">{{border}}</div>
+          </div>
         </div>
       </div>
     </div>

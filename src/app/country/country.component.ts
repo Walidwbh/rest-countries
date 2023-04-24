@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 import { CountriesService } from '../services/countries.service';
 import { Country, Currency, Language } from '../types/country';
-import { Observable, map } from 'rxjs';
+import { Observable, map, mergeMap, of } from 'rxjs';
 
 @Component({
   selector: 'app-country',
@@ -15,12 +15,16 @@ export class CountryComponent implements OnInit {
   country$!: Observable<Country>;
   constructor(private act: ActivatedRoute,
     private restService: CountriesService){
-
   }
   ngOnInit(): void {
     const name = this.act.snapshot.paramMap.get("name");
-    this.country$ = this.restService.getOneCountry(name!);
+    this.country$ = this.restService.getOneCountry(name!)
   }
+  // getBorderCountries(){
+  //   for(let i in this.borderCountries){
+  //     // this.borderCountries[i] = this.restService.getCountryByCode(this.borderCountries[i]).subscribe(data=>data.name)
+  //   }
+  // }
   getCurrencies(currencies: Currency[]){
     return currencies.map(c=>c.name).join(', ');
   }
