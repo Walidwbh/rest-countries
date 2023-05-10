@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { CountriesService } from '../services/countries.service';
 import { Country } from '../types/country';
 import { Observable, delay, map, take } from 'rxjs';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { Observable, delay, map, take } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  faSearch = faMagnifyingGlass;
   countriesArray!: any[];
   searchFilter!: string;
   constructor(private countrieService: CountriesService){
