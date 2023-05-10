@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo 
 
-https://walidwbh.github.io/rest-countries/home
+https://walidwbh.github.io/rest-countries
 
 ## Install dependancies
 
